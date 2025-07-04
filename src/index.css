@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enhanced background with gradient and subtle animation */
+.background {
+  background-image: radial-gradient(circle, #ff0062 3px, transparent 3px), radial-gradient(circle, #6f00ff 3px, transparent 3px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  background-color: #000; /* Changed background color to black */
+  animation: background-animation 10s infinite alternate;
+}
+
+@keyframes background-animation {
+  0% {
+    background-size: 40px 40px;
+  }
+  100% {
+    background-size: 50px 50px;
+  }
+}
+
+/* Enhanced spinner with gradient colors and smoother animation */
+.spinner {
+   margin: 40px auto;
+   width: 12px;
+   height: 12px;
+   animation: spinner-animation 1.5s infinite linear;
+   border-radius: 50%;
+   box-shadow: 30px 0px 0 0 #ff0062, 18px 23px 0 0 #6f00ff, -7px 29px 0 0 #00d4ff, -27px 13px 0 0 #ffea00, -27px -13px 0 0 #00ff62, -7px -29px 0 0 #ff00ea, 18px -23px 0 0 #ff6200;
+}
+
+@keyframes spinner-animation {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
